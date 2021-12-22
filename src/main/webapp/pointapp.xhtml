@@ -112,15 +112,18 @@
                                     <p:column headerText="Sending time">
                                         <h:outputText value="#{point.stime}"/>
                                     </p:column>
-                                    <p:column headerText="Hit?">
-                                        <h:outputText value="#{point.hit}"/>
-                                    </p:column>
                                 </p:dataTable>
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <td class="formCell">
+                            <h:form id="hid-f">
+                                <h:inputHidden id="xhid" value="#{pointbean.x}" />
+                                <h:inputHidden id="yhid" value="#{pointbean.y}" />
+                                <h:commandButton id="submithid" type="submit" action="#{pointbean.addPoint}"
+                                                 update="rCell"/>
+                            </h:form>
                             <h:form id="main-f">
                                 <div class="input">
                                     <div class="input-invite">

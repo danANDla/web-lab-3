@@ -117,6 +117,11 @@ function mouse(e){
         ysend=-(posy-offsety)*parseFloat(r)*300/(107*canvas.width);
         console.log(xsend, ysend);
         canvasflag = true;
+        document.getElementById('hid-f:xhid').value=xsend;
+        document.getElementById('hid-f:yhid').value=ysend;
+        document.getElementById("hid-f:submithid").click();
+        document.getElementById("hid-f:xhid").value = null;
+        document.getElementById("hid-f:yhid").value = null;
         draw(posx,posy,"#000000");
     }
 }
