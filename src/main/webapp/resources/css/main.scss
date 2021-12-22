@@ -152,13 +152,12 @@ table[class=contentTable]{
 
 .ui-datatable{
   color: white;
-}
-
-.ishit-true{
-  background-color: #59ab42 !important;
-}
-.ishit-false{
-  background-color: #ab2a3d !important;
+  .ishit-true{
+    background-color: #59ab42 !important;
+  }
+  .ishit-false{
+    background-color: #ab2a3d !important;
+  }
 }
 
 //.table-container{

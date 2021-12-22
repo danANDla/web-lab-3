@@ -92,7 +92,7 @@
                                              scrollable="true"
                                              scrollHeight="370"
                                              id="rCell"
-                                             rowStyleClass="#{pointbean.hit eq 'hit'?
+                                             rowStyleClass="#{point.hit eq 'hit'?
                                              'ishit-true' : 'ishit-false'}">
                                     <p:column headerText="X">
                                         <h:outputText value="#{point.x}"/>
@@ -108,6 +108,9 @@
                                     </p:column>
                                     <p:column headerText="Sending time">
                                         <h:outputText value="#{point.stime}"/>
+                                    </p:column>
+                                    <p:column headerText="Hit?">
+                                        <h:outputText value="#{point.hit}"/>
                                     </p:column>
                                 </p:dataTable>
                             </div>
