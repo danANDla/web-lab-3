@@ -34,7 +34,6 @@ public class pointBean implements Serializable {
         if(!validation()){
             return; //TODO add invalid values message
         }
-        this.y = 1f;
         this.r = 1f;
         this.hit = areacheck();
         this.stime = LocalDateTime.now();

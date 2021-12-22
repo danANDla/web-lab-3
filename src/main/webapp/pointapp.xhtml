@@ -103,7 +103,7 @@
                                     <p:column headerText="Execution time">
                                         <h:outputText value="#{point.extime}"/>
                                     </p:column>
-                                    <p:column headerText="Sending tme">
+                                    <p:column headerText="Sending time">
                                         <h:outputText value="#{point.stime}"/>
                                     </p:column>
                                 </p:dataTable>
@@ -125,15 +125,17 @@
                                     </div>
                                 </div>
                                 <div class="input">
-                                    <div class="input-invite"><label id="y-invite">type Y</label></div>
+                                    <div class="input-invite">
+                                        <h:outputLabel for="y-input" value="type Y" />
+                                    </div>
                                     <div class="input-field">
-
+                                        <h:inputText value="#{pointbean.y}" id="y-input"/>
                                     </div>
                                 </div>
                                 <div class="input">
                                     <div class="input-invite" id="r-invite">choose R</div>
                                     <div class="input-field">
-
+<!--                                        <ace:sliderEntry value="#{pointbean.r}" min="1" max="4"/>-->
                                     </div>
                                 </div>
 
