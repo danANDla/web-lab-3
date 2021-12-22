@@ -7,10 +7,11 @@
       xmlns:p="http://primefaces.org/ui">
 <f:view>
     <h:head>
-        <h:outputStylesheet library="css" name="main.css"/>
+
         <title>lab 3</title>
     </h:head>
     <h:body>
+        <h:outputStylesheet library="css" name="main.css"/>
         <div class="box">
             <section class="header">
                 <span> Алексеев Даниил </span> P3233 <br/>
@@ -90,7 +91,9 @@
                                 <p:dataTable var="point" value="#{pointbean.getHitTable()}"
                                              scrollable="true"
                                              scrollHeight="370"
-                                             id="rCell">
+                                             id="rCell"
+                                             rowStyleClass="#{pointbean.hit eq 'hit'?
+                                             'ishit-true' : 'ishit-false'}">
                                     <p:column headerText="X">
                                         <h:outputText value="#{point.x}"/>
                                     </p:column>

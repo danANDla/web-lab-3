@@ -150,13 +150,9 @@ table[class=contentTable]{
   vertical-align: top;
 }
 
-//.table-container{
-//  height: 24em;
-//}
-//
-//.table-container .ui-outputlabel{
-//  color:blue;
-//}
+.ui-datatable{
+  color: white;
+}
 
 .ishit-true{
   background-color: #59ab42 !important;
@@ -164,6 +160,14 @@ table[class=contentTable]{
 .ishit-false{
   background-color: #ab2a3d !important;
 }
+
+//.table-container{
+//  height: 24em;
+//}
+//
+//.table-container .ui-outputlabel{
+//  color:blue;
+//}
 
 //.resultTable {
 //  display: flex;

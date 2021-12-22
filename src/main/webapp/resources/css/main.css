@@ -150,6 +150,10 @@ table[class=contentTable] {
   vertical-align: top;
 }
 
+.ui-datatable {
+  color: white;
+}
+
 .ishit-true {
   background-color: #59ab42 !important;
 }
