@@ -38,7 +38,7 @@ public class postgreutil {
     }
 
     public void clearTableDB(){
-        initconnect(); // TODO clearTable func
+        initconnect();
         tr.begin();
         em.createQuery("delete from mypoint c", mypoint.class).executeUpdate();
         tr.commit();

@@ -34,7 +34,6 @@ public class pointBean implements Serializable {
         if(!validation()){
             return; //TODO add invalid values message
         }
-        this.r = 1f;
         this.hit = areacheck();
         this.stime = LocalDateTime.now();
         this.extime = (System.nanoTime()-entrytime)/1000000f;

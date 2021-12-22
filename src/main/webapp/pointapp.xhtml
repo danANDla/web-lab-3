@@ -135,7 +135,10 @@
                                 <div class="input">
                                     <div class="input-invite" id="r-invite">choose R</div>
                                     <div class="input-field">
-<!--                                        <ace:sliderEntry value="#{pointbean.r}" min="1" max="4"/>-->
+                                        <h:inputHidden id="number" value="#{pointbean.r}" />
+                                        <h:outputText value="Set ratio to %" />
+                                        <h:outputText id="output" value="#{pointbean.r}" />
+                                        <p:slider for="number" display="output" />
                                     </div>
                                 </div>
 
@@ -146,7 +149,7 @@
                                                              action="#{pointbean.addPoint}" update="rCell"/>
                                         </div>
                                         <div class="reset-btn">
-
+                                            <!--TODO reset button-->
                                         </div>
                                     </div>
                                     <div class="appart-btns-block">
