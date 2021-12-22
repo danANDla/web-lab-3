@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<f:view>
+    <h:head>
+        <h:outputStylesheet library="css" name="main.css"/>
+        <title>lab 3</title>
+    </h:head>
+    <h:body>
+        <div class="box">
+            <section class="header">
+                <span> Алексеев Даниил </span> P3233 <br/>
+                вар. 3310
+            </section>
+
+            <section class="hero">
+                <table class="contentTable">
+                    <tr>
+                        <td class="imageCell">
+                            <div class="parent-svg-container">
+                                <div class="svg-container">
+                                    <canvas id="responsive-canvas"/>
+                                </div>
+                            </div>
+                        </td>
+                        <td rowspan="2" class="responseCell">
+                            <div class="table-container">
+                                <!--<table class="resultTable">
+                                    <thead>
+                                    <tr>
+                                        <td class="res-table-X-clmn">X</td>
+                                        <td class="res-table-Y-clmn">Y</td>
+                                        <td class="res-table-R-clmn">R</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="result-table-body">
+
+                                    </tbody>
+                                </table>
+                                <h:dataTable value = "#{pointbean.getHitTable()}" var = "point"
+                                             styleClass = "resultTable"
+                                             headerClass = "resultTableHeader"
+                                             rowStyleClass ="#{point.hit ? 'ishit-true' : 'ishit-false'}">
+                                    <h:column>
+                                        <f:facet name = "header">X</f:facet>
+                                        #{point.x}
+                                    </h:column>
+
+                                    <h:column>
+                                        <f:facet name = "header">Y</f:facet>
+                                        #{point.y}
+                                    </h:column>
+
+                                    <h:column>
+                                        <f:facet name = "header">R</f:facet>
+                                        #{point.r}
+                                    </h:column>
+
+                                    <h:column>
+                                        <f:facet name = "header">SysTime</f:facet>
+                                        #{point.stime}
+                                    </h:column>
+                                </h:dataTable>-->
+                                <!--<p:dataTable var="point" value="#{pointbean.getHitTable()}"
+                                             widgetVar="pointsTable"
+                                             tableStyleClass="resultTable"
+                                             rowStyleClass="#{point.hit == 'hit' ? 'ishit-true' : 'ishit-false'}"
+                                             scrollable="true"
+                                             scrollHeight="370">
+                                    <p:column headerText="X">
+                                        <h:outputText value="#{point.x}"/>
+                                    </p:column>
+                                    <p:column headerText="Y">
+                                        <h:outputText value="#{point.y}"/>
+                                    </p:column>
+                                    <p:column headerText="R">
+                                        <h:outputText value="#{point.r}"/>
+                                    </p:column>
+                                    <p:column headerText="Execution time">
+                                        <h:outputText value="#{point.extime}"/>
+                                    </p:column>
+                                    <p:column headerText="Sending rtme">
+                                        <h:outputText value="#{point.stime}"/>
+                                    </p:column>
+                                </p:dataTable>-->
+                                <p:dataTable var="point" value="#{pointbean.getHitTable()}"
+                                             scrollable="true"
+                                             scrollHeight="370"
+                                             id="rCell">
+                                    <p:column headerText="X">
+                                        <h:outputText value="#{point.x}"/>
+                                    </p:column>
+                                    <p:column headerText="Y">
+                                        <h:outputText value="#{point.y}"/>
+                                    </p:column>
+                                    <p:column headerText="R">
+                                        <h:outputText value="#{point.r}"/>
+                                    </p:column>
+                                    <p:column headerText="Execution time">
+                                        <h:outputText value="#{point.extime}"/>
+                                    </p:column>
+                                    <p:column headerText="Sending tme">
+                                        <h:outputText value="#{point.stime}"/>
+                                    </p:column>
+                                </p:dataTable>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="formCell">
+                            <h:form id="main-f">
+                                <div class="input">
+                                    <div class="input-invite">
+                                        <p:outputLabel for="@next" id="x-invite" value="type X"/>
+                                    </div>
+                                    <div class="input-field">
+                                        <div class="x-spinner">
+                                            <p:spinner id="step" value="#{pointbean.x}"
+                                                       min="-5" max="5" stepFactor="1"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input">
+                                    <div class="input-invite"><label id="y-invite">type Y</label></div>
+                                    <div class="input-field">
+
+                                    </div>
+                                </div>
+                                <div class="input">
+                                    <div class="input-invite" id="r-invite">choose R</div>
+                                    <div class="input-field">
+
+                                    </div>
+                                </div>
+
+                                <div class="btns">
+                                    <div class="main-btns-block">
+                                        <div class="submit-btn">
+                                            <p:commandButton type="submit" value="send" id="submit-btn"
+                                                             action="#{pointbean.addPoint}" update="rCell"/>
+                                        </div>
+                                        <div class="reset-btn">
+
+                                        </div>
+                                    </div>
+                                    <div class="appart-btns-block">
+                                        <div class="clear-btn">
+                                            <p:commandButton type="" value="clear" id="clear-btn"
+                                                             action="#{pointbean.clearTable}" update="rCell"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </h:form>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+
+            <section class="footer">
+
+            </section>
+        </div>
+    </h:body>
+</f:view>
+</html>

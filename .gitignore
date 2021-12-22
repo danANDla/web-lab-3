@@ -1,0 +1,5 @@
+# Files
+.idea/compiler.xml
+# Directories
+target/
+src/test/

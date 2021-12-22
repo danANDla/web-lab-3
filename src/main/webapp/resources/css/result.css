@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600&display=swap");
+html, body {
+  background: #343434;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  color: white;
+  margin: 0;
+  height: 100vh;
+}
+
+.box {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+.header {
+  flex: 0 1 fit-content;
+  background: #8f8fff;
+  padding: 2px;
+  text-align: center;
+  font-size: 30px;
+}
+.header span {
+  font-weight: 600;
+}
+
+.hero {
+  flex: 1 1 auto;
+  display: block;
+  padding: 1%;
+  font-size: 20px;
+}
+
+.svg-container {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+#responsive-result-canvas {
+  width: 100%;
+}
+
+.not-image {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  height: fit-content;
+  width: 70%;
+}
+.not-image .btns-block {
+  text-align: left;
+  display: inline;
+  vertical-align: middle;
+}
+.not-image .btns-block input {
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #FFFFFF;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 20px;
+  color: #FFFFFF;
+  background-color: #292929;
+  text-align: center;
+  transition: all 0.2s;
+}
+.not-image .btns-block input:hover {
+  color: #000000;
+  background-color: #FFFFFF;
+}
+.not-image .data-block {
+  flex-grow: 1;
+  text-align: right;
+  width: available;
+  display: flex;
+  flex-direction: row;
+}
+.not-image .data-block .x-val, .not-image .data-block .y-val, .not-image .data-block .r-val {
+  flex-grow: 1;
+}
+
+.footer {
+  flex: 0 1 40px;
+}
+
+/*# sourceMappingURL=result.css.map */

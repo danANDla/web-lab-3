@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600&display=swap");
+html, body {
+  background: #343434;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  color: white;
+  margin: 0;
+  height: 100%;
+}
+
+.box {
+  display: flex;
+  flex-flow: column;
+}
+
+.header {
+  flex: 0 1 76px;
+  background: #8f8fff;
+  padding: 2px;
+  text-align: center;
+  font-size: 30px;
+}
+.header span {
+  font-weight: 600;
+}
+
+.hero {
+  flex: 1 1 auto;
+  padding: 1%;
+  font-size: 20px;
+}
+
+table[class=contentTable] {
+  width: 100%;
+  height: fit-content;
+}
+
+.imageCell {
+  text-align: center;
+  background: white;
+  width: 40%;
+}
+
+.svg-container {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+#responsive-canvas {
+  width: 100%;
+}
+
+.formCell {
+  width: 40%;
+}
+
+.input {
+  padding: 10px;
+  height: fit-content;
+  margin-bottom: 3px;
+  margin-top: 3px;
+  background: #202020;
+  display: block;
+}
+.input .input-invite {
+  width: 20%;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.input .input-invite #x-invite {
+  font-size: 20px;
+}
+.input .input-field {
+  vertical-align: middle;
+  display: inline-block;
+  width: 75%;
+}
+.input .input-field input[type=text] {
+  width: 110px;
+}
+.input .input-field select {
+  width: 55px;
+}
+.input .input-checkbox-field {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+}
+.input .input-checkbox-field .checkboxgroup {
+  display: inline-block;
+  vertical-align: 4px;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+}
+.input .input-error {
+  font-size: small;
+  font-style: italic;
+  font-weight: normal;
+  color: #AC2205;
+}
+
+.btns {
+  padding: 20px;
+  display: flex;
+  background: #292929;
+}
+.btns .main-btns-block {
+  text-align: left;
+  display: inline-block;
+  flex-grow: 2;
+}
+.btns .main-btns-block .submit-btn {
+  display: inline-block;
+}
+.btns .main-btns-block .reset-btn {
+  display: inline-block;
+}
+.btns .main-btns-block .submit-btn {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #FFFFFF;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 20px;
+  color: #FFFFFF;
+  background-color: #292929;
+  text-align: center;
+  transition: all 0.2s;
+}
+.btns .main-btns-block .submit-btn:hover {
+  color: #000000;
+  background-color: #FFFFFF;
+}
+.btns .appart-btns-block {
+  display: inline-block;
+  flex-grow: 1;
+  text-align: right;
+}
+.btns .appart-btns-block div.clear-btn {
+  display: inline-block;
+}
+.btns .appart-btns-block div.clear-btn input {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #FFFFFF;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 20px;
+  color: #FFFFFF;
+  background-color: #292929;
+  text-align: center;
+  transition: all 0.2s;
+}
+.btns .appart-btns-block div.clear-btn input:hover {
+  color: white;
+  background-color: #ab2a3d;
+}
+
+.responseCell {
+  vertical-align: top;
+}
+
+.ishit-true {
+  background-color: #59ab42 !important;
+}
+
+.ishit-false {
+  background-color: #ab2a3d !important;
+}
+
+.msgFromServlet {
+  margin-top: 20px;
+  text-align: center;
+}
+.msgFromServlet span {
+  width: fit-content;
+  background: #8f8fff;
+}
+
+.footer {
+  flex: 0 1 40px;
+}
+
+/*# sourceMappingURL=main.css.map */

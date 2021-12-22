@@ -1,0 +1,56 @@
+<svg width="380" height="380" xmlns="http://www.w3.org/2000/svg" stroke="null" style="vector-effect: non-scaling-stroke;" x="0px" y="0px" viewBox="0 0 380 380">
+ <defs>
+  <style type="text/css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400');</style>
+ </defs>
+ <g stroke="null">
+  <title stroke="null">Graph</title>
+  <rect width="100%" height="100%" fill="white"/>
+  <g id="svg_91">
+   <g stroke="null" id="svg_33">
+    <line transform="rotate(90 186.685 202.106)" stroke="#000" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_2" y2="373.82237" x2="186.68477" y1="30.391" x1="186.68477" fill="none"/>
+    <g stroke="null" id="svg_10">
+     <line transform="rotate(90 357.064 201.156)" stroke="#000" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_8" y2="202.80459" x2="355.96478" y1="199.50789" x1="358.16259" fill="none"/>
+     <line transform="rotate(204 357.066 203.076)" stroke="#000" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_9" y2="204.724" x2="355.97076" y1="201.42729" x1="358.16856" fill="none"/>
+    </g>
+    <line stroke="#000" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_13" y2="200.60119" x2="255.18244" y1="203.58599" x1="255.18244" fill="none"/>
+    <line stroke="#000" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_16" y2="200.51079" x2="328.14646" y1="203.49558" x1="328.14646" fill="none"/>
+    <line transform="rotate(180 34.2068 202.132)" stroke="#000" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_21" y2="200.64" x2="34.20694" y1="203.6248" x1="34.20694" fill="none"/>
+    <line transform="rotate(180 107.171 202.043)" stroke="#000" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_22" y2="200.54962" x2="107.17096" y1="203.53442" x1="107.17096" fill="none"/>
+   </g>
+   <path stroke="#000" id="svg_44" d="m68.38193,154.45127" opacity="NaN" fill="none"/>
+   <g stroke="null" id="svg_42">
+    <line stroke="#000" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_34" y2="368.22153" x2="181.34443" y1="24.79015" x1="181.34443" fill="none"/>
+    <g transform="rotate(-90 181.781 26.1251)" stroke="null" id="svg_37">
+     <line transform="rotate(90 181.78 24.7391)" stroke="#000" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_35" y2="26.387" x2="180.68062" y1="23.0903" x1="182.87842" fill="none"/>
+     <line transform="rotate(204 181.783 26.6591)" stroke="#000" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_36" y2="28.30641" x2="180.68659" y1="25.0097" x1="182.8844" fill="none"/>
+    </g>
+    <line transform="rotate(-90 181.332 128.008)" stroke="#000" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_38" y2="126.51551" x2="181.33169" y1="129.50031" x1="181.33169" fill="none"/>
+    <line transform="rotate(-90 181.241 55.0441)" stroke="#000" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_39" y2="53.55151" x2="181.24126" y1="56.53631" x1="181.24126" fill="none"/>
+    <line transform="rotate(90 181.371 348.983)" stroke="#000" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_40" y2="347.49104" x2="181.3707" y1="350.47584" x1="181.3707" fill="none"/>
+    <line transform="rotate(90 181.28 276.019)" stroke="#000" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_41" y2="274.52632" x2="181.28041" y1="277.51111" x1="181.28041" fill="none"/>
+   </g>
+   <path stroke="#000" id="svg_47" d="m106.98577,196.30929" opacity="NaN" fill="none"/>
+   <path stroke="#000" id="svg_51" d="m186.21282,196.30929" opacity="NaN" fill="none"/>
+   <path stroke="#000" id="svg_53" d="m106.98576,196.34936" opacity="NaN" fill="none"/>
+   <path stroke="#000" id="svg_54" d="m180.99529,196.34936" opacity="NaN" fill="none"/>
+   <path stroke="#000" id="svg_55" d="m118.12432,217.33935" opacity="NaN" fill="none"/>
+   <path stroke="#000" id="svg_56" d="m136.68858,223.03239" opacity="NaN" fill="none"/>
+   <path id="svg_59" d="m181.24281,196.29985" opacity="NaN" stroke-width="0.5" stroke="#000" fill="none"/>
+   <path id="svg_60" d="m181.24281,196.29985" opacity="NaN" stroke-width="0.5" stroke="#000" fill="none"/>
+   <path transform="rotate(-180 143.849 239.557)" id="svg_65" d="m106.90292,202.596c73.95233,0 73.95233,73.95233 73.92116,73.83161c0.03117,0.12072 -73.92131,0.12072 -73.95233,0c0.03116,0 0.03117,-70.98729 0.03117,-70.98729c0,0 0,-1.49701 -0.03117,-1.61773" opacity="0.59" stroke-width="0.5" fill="#8f8fff"/>
+   <path opacity="0.59" stroke="null" id="svg_66" d="m34.65718,201.8475c0,0 146.40765,-73.50323 146.40765,-73.50323c0,0 0,73.35474 -0.09058,73.23499" stroke-width="0.5" fill="#8f8fff"/>
+   <path id="svg_71" d="m328.23701,55.05453" opacity="NaN" stroke-width="0.5" stroke="#000000" fill="none"/>
+   <rect stroke="null" opacity="0.59" id="svg_74" height="146.52195" width="147.00857" y="55.05453" x="181.22844" stroke-width="0.5" fill="#8f8fff"/>
+   <text xml:space="preserve" text-anchor="start" font-family="Montserrat" font-size="17" id="svg_76" y="216.9181" x="243.72865" stroke-width="0" stroke="null" fill="#000000">R/2</text>
+   <text xml:space="preserve" text-anchor="start" font-family="Montserrat" font-size="17" id="svg_80" y="280.75567" x="183.65783" stroke-width="0" stroke="null" fill="#000000">-R/2</text>
+   <text xml:space="preserve" text-anchor="start" font-family="Montserrat" font-size="17" id="svg_81" y="353.66762" x="183.65783" stroke-width="0" stroke="null" fill="#000000">-R</text>
+   <text xml:space="preserve" text-anchor="start" font-family="Montserrat" font-size="17" id="svg_82" y="132.90017" x="183.65783" stroke-width="0" stroke="null" fill="#000000">R/2</text>
+   <text xml:space="preserve" text-anchor="start" font-family="Montserrat" font-size="17" id="svg_83" y="60.89115" x="183.65783" stroke-width="0" stroke="null" fill="#000000">R</text>
+   <text font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Montserrat" font-size="13" id="svg_84" y="210.81794" x="358.20725" stroke-width="0" stroke="null" fill="#000000">x</text>
+   <text font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Montserrat" font-size="13" id="svg_85" y="23.5713" x="184.21016" stroke-width="0" stroke="null" fill="#000000">y</text>
+   <text xml:space="preserve" text-anchor="start" font-family="Montserrat" font-size="17" id="svg_88" y="216.9181" x="318.14756" stroke-width="0" stroke="null" fill="#000000">R</text>
+   <text stroke="null" xml:space="preserve" text-anchor="start" font-family="Montserrat" font-size="17" id="svg_89" y="216.9181" x="91.01486" stroke-width="0" fill="#000000">-R/2</text>
+   <text stroke="null" xml:space="preserve" text-anchor="start" font-family="Montserrat" font-size="17" id="svg_90" y="216.9181" x="25.12312" stroke-width="0" fill="#000000">-R</text>
+  </g>
+ </g>
+</svg>
