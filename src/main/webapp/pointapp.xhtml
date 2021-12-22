@@ -136,16 +136,16 @@
                                     <div class="input-invite" id="r-invite">choose R</div>
                                     <div class="input-field">
                                         <h:inputHidden id="number" value="#{pointbean.r}" />
-                                        <h:outputText value="Set ratio to %" />
                                         <h:outputText id="output" value="#{pointbean.r}" />
-                                        <p:slider for="number" display="output" />
+                                        <p:slider for="number" display="output"
+                                                  minValue="1" maxValue="4" step="0.5"/>
                                     </div>
                                 </div>
 
                                 <div class="btns">
                                     <div class="main-btns-block">
                                         <div class="submit-btn">
-                                            <p:commandButton type="submit" value="send" id="submit-btn"
+                                            <p:commandButton type="submit" value="send"
                                                              action="#{pointbean.addPoint}" update="rCell"/>
                                         </div>
                                         <div class="reset-btn">
@@ -154,7 +154,7 @@
                                     </div>
                                     <div class="appart-btns-block">
                                         <div class="clear-btn">
-                                            <p:commandButton type="" value="clear" id="clear-btn"
+                                            <p:commandButton type="" value="clear"
                                                              action="#{pointbean.clearTable}" update="rCell"/>
                                         </div>
                                     </div>
