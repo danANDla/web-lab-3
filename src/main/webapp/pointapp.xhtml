@@ -7,7 +7,7 @@
       xmlns:p="http://primefaces.org/ui">
 <f:view>
     <h:head>
-
+        <h:outputScript library="js" name="canvas.js" />
         <title>lab 3</title>
     </h:head>
     <h:body>
@@ -24,7 +24,10 @@
                         <td class="imageCell">
                             <div class="parent-svg-container">
                                 <div class="svg-container">
-                                    <canvas id="responsive-canvas"/>
+                                    <div class="parent-svg-container">
+                                        <div class="svg-container"><canvas id="responsive-canvas"></canvas></div>
+                                        <script>init();</script>
+                                    </div>
                                 </div>
                             </div>
                         </td>
@@ -96,7 +99,7 @@
                                              'ishit-true' : 'ishit-false'}">
                                     <p:column headerText="X">
                                         <h:outputText value="#{point.x}"/>
-                                    </p:column>
+                                      </p:column>
                                     <p:column headerText="Y">
                                         <h:outputText value="#{point.y}"/>
                                     </p:column>
@@ -144,7 +147,9 @@
                                         <h:inputHidden id="number" value="#{pointbean.r}" />
                                         <h:outputText id="output" value="#{pointbean.r}" />
                                         <p:slider for="number" display="output"
-                                                  minValue="1" maxValue="4" step="0.5"/>
+                                                  minValue="1" maxValue="4" step="0.5"
+                                                  onSlide="initpng(event, ui)"
+                                                  id="rslider"/>
                                     </div>
                                 </div>
 
@@ -177,4 +182,5 @@
         </div>
     </h:body>
 </f:view>
+
 </html>
