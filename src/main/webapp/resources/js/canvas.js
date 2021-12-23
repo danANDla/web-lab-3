@@ -39,20 +39,45 @@ function initpng(event, ui){
     img.onload = function() {
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
     }
-    canvas.addEventListener("click", function (e) {
-        mouse(e)
-    }, false);
     drawall();
 }
 
 function init() {
-    console.log("init canvas", 1);
+    radius = 1;
+    console.log(document.getElementById("main-f:output").value);
+    console.log("init canvas", radius);
     canvas = document.getElementById('responsive-canvas');
     ctx = canvas.getContext("2d");
     let heightRatio = 1;
     canvas.height = canvas.width * heightRatio;
     let img = new Image();
-    img.src = "./resources/img/1.png";
+    switch (radius) {
+        case 1:
+            img_src = "./resources/img/1.png";
+            break;
+        case 1.5:
+            img_src = "./resources/img/1_5.png";
+            break;
+        case 2:
+            img_src = "./resources/img/2.png";
+            break;
+        case 2.5:
+            img_src = "./resources/img/2_5.png";
+            break;
+        case 3:
+            img_src = "./resources/img/3.png";
+            break;
+        case 3.5:
+            img_src = "./resources/img/3_5.png";
+            break;
+        case 4:
+            img_src = "./resources/img/4.png";
+            break;
+        default:
+            img_src = "./resources/img/1.png";
+            break;
+    }
+    img.src = img_src;
     img.onload = function() {
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
     }
@@ -76,7 +101,7 @@ function draw(posx, posy, color) {
 }
 
 function drawall(){
-    console.log("Draw all");
+    console.log("Draw all for radius", radius);
     canvas = document.getElementById('responsive-canvas');
     $(".ishit-true").each( function (){
         let rowrad = $(this).find("td:nth-child(3)").text();
@@ -148,11 +173,11 @@ function mouse(e){
         canvasflag = true;
         document.getElementById('hid-f:xhid').value=xsend;
         document.getElementById('hid-f:yhid').value=ysend;
+        console.log("AAAAA", document.getElementById('hid-f:xhid').value, document.getElementById('hid-f:yhid').value);
         document.getElementById('hid-f:rhid').value=parseFloat(radius);
         document.getElementById("hid-f:submithid").click();
         document.getElementById("hid-f:xhid").value = null;
         document.getElementById("hid-f:yhid").value = null;
-        document.getElementById("hid-f:rhid").value = null;
         draw(posx,posy,"#000000");
     }
 }

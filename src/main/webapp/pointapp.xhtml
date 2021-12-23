@@ -29,7 +29,6 @@
                                             <div class="svg-container"><canvas id="responsive-canvas"></canvas></div>
                                         </p:panel>
                                     </div>
-                                    <script>init();</script>
                                 </div>
                             </div>
                         </td>
@@ -93,29 +92,30 @@
                                         <h:outputText value="#{point.stime}"/>
                                     </p:column>
                                 </p:dataTable>-->
-                                <p:dataTable var="point" value="#{pointbean.getHitTable()}"
-                                             scrollable="true"
-                                             scrollHeight="370"
-                                             id="rCell"
-                                             rowStyleClass="#{point.hit eq 'hit'?
+                                <p:outputPanel id="rCell">
+                                    <p:dataTable var="point" value="#{pointbean.getHitTable()}"
+                                                 scrollable="true"
+                                                 scrollHeight="370"
+                                                 rowStyleClass="#{point.hit eq 'hit'?
                                              'ishit-true' : 'ishit-false'}">
-                                    <p:column headerText="X">
-                                        <h:outputText value="#{point.x}"/>
-                                      </p:column>
-                                    <p:column headerText="Y">
-                                        <h:outputText value="#{point.y}"/>
-                                    </p:column>
-                                    <p:column headerText="R">
-                                        <h:outputText value="#{point.r}"/>
-                                    </p:column>
-                                    <p:column headerText="Execution time">
-                                        <h:outputText value="#{point.extime}"/>
-                                    </p:column>
-                                    <p:column headerText="Sending time">
-                                        <h:outputText value="#{point.stime}"/>
-                                    </p:column>
-                                </p:dataTable>
-
+                                        <p:column headerText="X">
+                                            <h:outputText value="#{point.x}"/>
+                                        </p:column>
+                                        <p:column headerText="Y">
+                                            <h:outputText value="#{point.y}"/>
+                                        </p:column>
+                                        <p:column headerText="R">
+                                            <h:outputText value="#{point.r}"/>
+                                        </p:column>
+                                        <p:column headerText="Execution time">
+                                            <h:outputText value="#{point.extime}"/>
+                                        </p:column>
+                                        <p:column headerText="Sending time">
+                                            <h:outputText value="#{point.stime}"/>
+                                        </p:column>
+                                    </p:dataTable>
+                                    <script>drawall();</script>
+                                </p:outputPanel>
                             </div>
                         </td>
                     </tr>
@@ -125,8 +125,8 @@
                                 <h:inputHidden id="xhid" value="#{pointbean.x}" />
                                 <h:inputHidden id="yhid" value="#{pointbean.y}" />
                                 <h:inputHidden id="rhid" value="#{pointbean.r}" />
-                                <h:commandButton id="submithid" type="submit" action="#{pointbean.addPoint}"
-                                                 update="rCell"/>
+                                <p:commandButton id="submithid" type="submit"
+                                                 action="#{pointbean.addPoint}" update="rCell"/>
                             </h:form>
                             <h:form id="main-f">
                                 <div class="input">
@@ -156,6 +156,7 @@
                                         <p:slider for="number" display="output"
                                                   minValue="1" maxValue="4" step="0.5"
                                                   onSlide="initpng(event, ui)"
+                                                  onSlideStart="initpng(event, ui)"
                                                   id="rslider" update="svg-panel"/>
                                     </div>
                                     <script>setR();</script>
@@ -179,6 +180,7 @@
                                     </div>
                                 </div>
                             </h:form>
+                            <script>init();</script>
                         </td>
                     </tr>
                 </table>
@@ -190,5 +192,4 @@
         </div>
     </h:body>
 </f:view>
-
 </html>
