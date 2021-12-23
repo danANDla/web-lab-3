@@ -243,3 +243,30 @@ table[class=contentTable]{
 .footer{
   flex: 0 1 40px;
 }
+
+
+.main-block{
+  text-align: center;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .link-button {
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:15px 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-size: 20px;
+    color:#FFFFFF;
+    background-color:#292929;
+    text-align:center;
+    transition: all 0.2s;
+    &:hover{
+      color:#000000;
+      background-color:#FFFFFF;
+    }
+  }
+}
