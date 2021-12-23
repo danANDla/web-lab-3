@@ -56,7 +56,20 @@ public class pointBean implements Serializable {
     }
 
     public boolean areacheck(){
-        return true;
+        boolean rect = false;
+        boolean circle = false;
+        boolean triangle = false;
+        float epsilon = 0.000000001f;
+        // in rect
+            rect = ( (x>-0.5*r || Math.abs(0.5*r + x) <= epsilon) && (x < 0  || Math.abs(x - 0) <= epsilon)
+                    && (y < 0 || Math.abs(y - 0) <= epsilon) && (y > -r || Math.abs(y + r) <= epsilon) );
+        // in circle
+            circle = ( (r*r*0.25 >= x*x+y*y || Math.abs(r*r*0.25 - x*x+y*y) <= epsilon)
+                    && (x < 0 || Math.abs(x) <= epsilon) && (y > 0 || Math.abs(y) <= epsilon) );
+        // in triangle
+            triangle = ( (x > 0 || Math.abs(x-0)<=epsilon) && (x<r || Math.abs(x-r)<=epsilon)
+                    && (y < 0 || Math.abs(y-0)<=epsilon) && (y>(x-r) || Math.abs(y-(x-r))<=epsilon) );
+        return (rect || circle || triangle);
     }
 
     public float getX() {
