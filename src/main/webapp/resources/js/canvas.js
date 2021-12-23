@@ -42,6 +42,7 @@ function initpng(event, ui){
     canvas.addEventListener("click", function (e) {
         mouse(e)
     }, false);
+    drawall();
 }
 
 function init() {
@@ -61,7 +62,9 @@ function init() {
 }
 
 function draw(posx, posy, color) {
+    console.log("Draw", posx, posy, radius);
     let img = new Image();
+    if(img_src === undefined) img_src = "./resources/img/1.png";
     img.src = img_src;
     img.onload = function() {
         ctx.fillStyle = color;
@@ -72,6 +75,35 @@ function draw(posx, posy, color) {
     }
 }
 
+function drawall(){
+    console.log("Draw all");
+    canvas = document.getElementById('responsive-canvas');
+    $(".ishit-true").each( function (){
+        let rowrad = $(this).find("td:nth-child(3)").text();
+        if(parseFloat(rowrad) === radius ){
+            let rowx = $(this).find("td:nth-child(1)").text();
+            let rowy = $(this).find("td:nth-child(2)").text();
+            let offsetx=(canvas.width*150)/300;
+            let offsety=(canvas.height*150)/300;
+            let posx=offsetx+parseFloat(rowx)/radius*107/300*canvas.width;
+            let posy=offsety-parseFloat(rowy)/radius*107/300*canvas.width;
+            draw(posx, posy, "#59ab42")
+        }
+    });
+    $(".ishit-false").each( function (){
+        let rowrad = $(this).find("td:nth-child(3)").text();
+        if(parseFloat(rowrad) === radius ){
+            let rowx = $(this).find("td:nth-child(1)").text();
+            let rowy = $(this).find("td:nth-child(2)").text();
+            let offsetx=(canvas.width*150)/300;
+            let offsety=(canvas.height*150)/300;
+            let posx=offsetx+parseFloat(rowx)/radius*107/300*canvas.width;
+            let posy=offsety-parseFloat(rowy)/radius*107/300*canvas.width;
+            draw(posx, posy, "#ab2a3d");
+        }
+    });
+}
+
 function coord(x, y, r, hit){
     canvas = document.getElementById('responsive-canvas');
     x=parseFloat(x);
@@ -80,8 +112,8 @@ function coord(x, y, r, hit){
     console.log(x,y,r);
     let offsetx=(canvas.width*150)/300;
     let offsety=(canvas.height*150)/300;
-    let posx=offsetx+x/r*150/300*canvas.width;
-    let posy=offsety-y/r*150/300*canvas.width;
+    let posx=offsetx+x/r*107/300*canvas.width;
+    let posy=offsety-y/r*107/300*canvas.width;
     let color;
     if(hit === true){
         color = "#59ab42";
@@ -134,4 +166,5 @@ function getMouesPosition(e) {
 function setR(){
     console.log("setR")
     radius = document.getElementById("main-f:output").innerText;
+    radius = parseFloat(radius);
 }
