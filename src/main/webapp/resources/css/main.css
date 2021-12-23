@@ -160,6 +160,10 @@ table[class=contentTable] {
   background-color: #ab2a3d !important;
 }
 
+[id="hid-f:submithid"] {
+  display: none;
+}
+
 .msgFromServlet {
   margin-top: 20px;
   text-align: center;

@@ -1,9 +1,9 @@
-var canvas, ctx, xsend, ysend, img_src;
+var canvas, ctx, xsend, ysend, img_src, radius;
 var canvasflag = false;
 
 function initpng(event, ui){
-    let radius = ui.value;
-    console.log("init canvas", radius);
+    radius = ui.value;
+    console.log("initpng canvas", radius);
     canvas = document.getElementById('responsive-canvas');
     ctx = canvas.getContext("2d");
     let heightRatio = 1;
@@ -95,11 +95,8 @@ function coord(x, y, r, hit){
 }
 
 function mouse(e){
-    // let r = $("input[name='r-input']:checked").val();
-    //let r = document.getElementById("main-f:rslider").getValue();
-    let r = document.getElementById("main-f:output").innerText;
-    console.log(parseFloat(r));
-    if (typeof r == 'undefined') {
+    console.log(parseFloat(radius));
+    if (typeof radius == 'undefined') {
         document.getElementById("r-invite").style.color = "#AC2205";
         document.getElementById("r-invite").style.fontWeight = "300";
     }
@@ -113,15 +110,17 @@ function mouse(e){
         posy=parseFloat(posy);
         let offsetx=(canvas.width*150)/300;
         let offsety=(canvas.height*150)/300;
-        xsend=(posx-offsetx)*parseFloat(r)*300/(107*canvas.width);
-        ysend=-(posy-offsety)*parseFloat(r)*300/(107*canvas.width);
+        xsend=(posx-offsetx)*parseFloat(radius)*300/(107*canvas.width);
+        ysend=-(posy-offsety)*parseFloat(radius)*300/(107*canvas.width);
         console.log(xsend, ysend);
         canvasflag = true;
         document.getElementById('hid-f:xhid').value=xsend;
         document.getElementById('hid-f:yhid').value=ysend;
+        document.getElementById('hid-f:rhid').value=parseFloat(radius);
         document.getElementById("hid-f:submithid").click();
         document.getElementById("hid-f:xhid").value = null;
         document.getElementById("hid-f:yhid").value = null;
+        document.getElementById("hid-f:rhid").value = null;
         draw(posx,posy,"#000000");
     }
 }
@@ -130,4 +129,9 @@ function getMouesPosition(e) {
     let mouseX = e.offsetX * canvas.width / canvas.clientWidth | 0;
     let mouseY = e.offsetY * canvas.height / canvas.clientHeight | 0;
     return {x: mouseX, y: mouseY};
+}
+
+function setR(){
+    console.log("setR")
+    radius = document.getElementById("main-f:output").innerText;
 }

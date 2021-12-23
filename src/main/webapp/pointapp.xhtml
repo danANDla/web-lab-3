@@ -25,9 +25,12 @@
                             <div class="parent-svg-container">
                                 <div class="svg-container">
                                     <div class="parent-svg-container">
-                                        <div class="svg-container"><canvas id="responsive-canvas"></canvas></div>
-                                        <script>init();</script>
+                                        <p:panel id="svg-panel">
+                                            <div class="svg-container"><canvas id="responsive-canvas"></canvas></div>
+
+                                        </p:panel>
                                     </div>
+                                    <script>init();</script>
                                 </div>
                             </div>
                         </td>
@@ -121,6 +124,7 @@
                             <h:form id="hid-f">
                                 <h:inputHidden id="xhid" value="#{pointbean.x}" />
                                 <h:inputHidden id="yhid" value="#{pointbean.y}" />
+                                <h:inputHidden id="rhid" value="#{pointbean.r}" />
                                 <h:commandButton id="submithid" type="submit" action="#{pointbean.addPoint}"
                                                  update="rCell"/>
                             </h:form>
@@ -152,8 +156,9 @@
                                         <p:slider for="number" display="output"
                                                   minValue="1" maxValue="4" step="0.5"
                                                   onSlide="initpng(event, ui)"
-                                                  id="rslider"/>
+                                                  id="rslider" update="svg-panel"/>
                                     </div>
+                                    <script>setR();</script>
                                 </div>
 
                                 <div class="btns">
